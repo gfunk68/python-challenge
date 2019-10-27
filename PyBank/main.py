@@ -1,6 +1,5 @@
 import os
 import csv
-import math
 
 totalprofit = 0
 totalmonths = 0
@@ -12,7 +11,7 @@ profitchange = 0
 profitchangelist = []
 
 csvpath = os.path.join('Resources','budget_data.csv')
-writecsvpath = os.path.join('Output','budget_summary.txt')
+writepath = os.path.join('Output','budget_summary.txt')
 
 with open(csvpath, 'r') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
@@ -45,7 +44,7 @@ print(f"Average Change: ${profitavg}")
 print(f"Greatest Increase in Profits: {maxincreasemonth} (${maxincreaseprofit})")
 print(f"Greatest Decrease in Profits: {maxdecreasemonth} (${maxdecreaseprofit})")
 
-with open(writecsvpath, "w", newline ='') as txtfile:
+with open(writepath, "w", newline ='') as txtfile:
     txtfile.write(f"Total Months: {totalmonths} \n")
     txtfile.write(f"Total: ${totalprofit} \n")
     txtfile.write(f"Average Change: ${profitavg} \n")
