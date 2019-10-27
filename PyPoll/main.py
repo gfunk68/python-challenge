@@ -7,7 +7,7 @@ totalvotescandidate = []
 maxvote = 0
 
 csvpath = os.path.join("Resources", "election_data.csv")
-writepath = os.path.join("Resources", "election_summary.txt")
+writepath = os.path.join("Output", "election_summary.txt")
 
 
 with open(csvpath) as election_data:
